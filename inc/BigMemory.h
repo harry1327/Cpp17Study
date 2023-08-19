@@ -47,6 +47,7 @@ class Bigmemory{
             std::cout << "Calling the move operator" << std::endl;
         }
         ~Bigmemory(){
+            num_ = 0;
             delete []str_;
         }
     private:
