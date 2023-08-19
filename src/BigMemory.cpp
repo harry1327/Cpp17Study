@@ -1,6 +1,6 @@
 #include"../inc/BigMemory.h"
 
-void test(){
+void test_BigMemory(){
     // Test copy constructor
     Bigmemory A(10, "hello!");
     Bigmemory B(A);
@@ -16,8 +16,4 @@ void test(){
     Bigmemory F;
     F = static_cast<Bigmemory &&> (B);
     return;
-}
-
-int main(){
-    test();
 }

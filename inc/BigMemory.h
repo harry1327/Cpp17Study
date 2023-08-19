@@ -2,7 +2,7 @@
 #include<string.h>
 #include<iostream>
 
-extern void test();
+extern void test_BigMemory();
 
 class Bigmemory{
     public:
@@ -40,11 +40,12 @@ class Bigmemory{
             return *this;
         }
         // Move operator
-        Bigmemory&& operator = (Bigmemory &&pool){
+        Bigmemory& operator = (Bigmemory &&pool){
             num_ = pool.num_;
             str_ = pool.str_;
             pool.str_ = nullptr;
             std::cout << "Calling the move operator" << std::endl;
+            return *this; 
         }
         ~Bigmemory(){
             num_ = 0;
